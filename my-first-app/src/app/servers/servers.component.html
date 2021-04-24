@@ -1,0 +1,46 @@
+<!-- <div>
+  <label>Input</label>
+  <input 
+  type="text" name="serverName" id="serverName"
+  class="form-control"
+  (input)="onInputEnter($event)"
+  >
+  <p>{{ serverName }}</p>
+  <p>Hello</p>
+  <button class="btn btn-primary" 
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+  >Add Server</button>
+  <p>{{ serverCreationStatus }}</p>
+
+  <hr>
+
+  <app-server></app-server>
+
+
+  <p class="app-server"></p>
+
+  
+  <p app-server></p>
+
+  <p *ngIf="false; else otherText">Show this</p>
+  
+  <ng-template #otherText>On False</ng-template>
+
+  <p [ngStyle]="{'background-color': getColor()}" 
+  [ngClass]="{online: serverStatus === 'online'}"
+  >
+  {{ serverStatus }}</p>  
+
+</div> -->
+
+
+<div class="container">
+    <div class="row">  
+      <button class="btn btn-primary" 
+      (click)="onDisplayClick()"
+      >Display Details</button>  
+      <p [hidden]="!showPassword" >Secret=tuana</p>
+      <p *ngFor="let click of clickList; let i = index" [ngStyle]="{'background-color': i > 5 ? 'blue' : 'transparent'}" [ngClass]="{'clickColor': i > 5}">{{ click }}</p>
+    </div>
+  </div>
